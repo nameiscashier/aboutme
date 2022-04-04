@@ -1,0 +1,173 @@
+* {
+	margin: 0px;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: #f9f9f9;
+	cursor: url('https://i.imgur.com/lhPqll6.png'), default
+}
+::selection {
+    color:#fe89b3;
+    background-color:white;
+}
+
+::-moz-selection {
+    color:#fe89b3;
+    background-color:white;
+}
+.author_info {
+	padding: 20px 20px 0px 20px;
+	border-radius: 10px;
+	background-color: white;
+	width: 50%;
+    margin: 20px;
+    text-align: left;
+    box-shadow:4px 4px 40px rgba(0,0,0,.06);
+    line-height: 30px;
+}
+.author_name {
+	padding: 10px;
+}
+.author_name a {
+	padding: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+	color: white;
+    background-image: linear-gradient(90deg, #ffb4c9, #b698ff);
+    border-radius: 10px;
+    position: relative;
+    bottom: 12px;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 3px 3px 3px #ffd7edbf;
+}
+[data-c-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+[data-c-tooltip]:before,
+[data-c-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+}
+/* Show the entire c-tooltip on hover and focus */
+[data-c-tooltip]:hover:before,
+[data-c-tooltip]:hover:after,
+[data-c-tooltip]:focus:before,
+[data-c-tooltip]:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+[data-c-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+/* Base styles for the c-tooltip's content area */
+[data-c-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 100%;
+  background-color: #ffddeb;
+  border-radius: 10px 10px 10px 0px;
+  color: #585858;
+  content: attr(data-c-tooltip);
+  font-size: 14px;
+  line-height: 1.2;
+}
+[tooltip-position='right']:before,
+[tooltip-position='right']:after {
+  bottom: 50%;
+  left: 100%;
+}
+[tooltip-position='right']:before {
+  margin-bottom: 0;
+  margin-left: -12px;
+  border-top-color: transparent;
+  border-right-color: #ffddeb;
+/* Base end styles for the c-tooltip's */
+}
+[tooltip-position='right']:hover:before,
+[tooltip-position='right']:hover:after,
+[tooltip-position='right']:focus:before,
+[tooltip-position='right']:focus:after {
+  -webkit-transform: translateX(12px);
+  -moz-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
+.author_name img {
+height: 40px;
+width: 40px;
+border-radius: 10px;
+box-shadow: 5px 6px 5px rgb(0 0 0 / 20%);
+}
+.author_links {
+	border: 1px solid rgb(0 0 0 / 7%);
+}
+.author_links .link_item ul li {
+	float: left;
+	margin: 22px 62px 20px;
+}
+.author_links .link_item ul {
+	list-style-type: none;
+}
+.author_links .link_item a {
+	padding: 10px;
+    background-color: #ffddeb;
+    border-radius: 10px;
+    text-align: center;
+    color: #585858;
+    text-decoration: none;
+    font-style: italic;
+}
+.author_content p {
+	margin: 10px 0px 30px 0px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-family: 'Patrick Hand', cursive;
+    color: #606060;
+}
+
+.info_content {
+	padding: 20px;
+	border-radius: 10px;
+	background-color: white;
+	width: 50%;
+    box-shadow:4px 4px 40px rgba(0,0,0,.06);
+    line-height: 30px;
+    text-align: center;
+}
+.info_content i {
+	color: indianred;
+
+}
+.info_content a {
+	text-decoration: none;
+	margin: 10px;
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+}
+.info_content .info_item {
+	width: 50%;
+	float: left;
+}
